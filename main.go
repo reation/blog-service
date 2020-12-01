@@ -31,6 +31,10 @@ func init(){
 	}
 }
 
+//	@title				博客系统
+//	@version 			1.0
+//	@description		GO 语言学习之旅:博客系统
+//	@termOfService		https://github.com/reation/blog-service
 func main(){
 	global.Logger.Infof("%s: go-log/%s", "reation", "book_blog")
 	gin.SetMode(global.ServerSetting.RunMode)
