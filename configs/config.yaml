@@ -10,6 +10,13 @@ App:
   LogSavePath         : storage/logs
   LogFileName         : app
   LogFileExt          : .log
+  UploadSavePath      : storage/uploads
+  UploadServerUrl     : http://127.0.0.1:8000/static
+  UploadImageMaxSize  : 5 # MB
+  UploadImageAllowExts:
+    - .jpg
+    - .jpeg
+    - .png
 
 Database:
   DBType              : mysql
@@ -22,3 +29,18 @@ Database:
   ParseTime           : True
   MaxIdleConns        : 10
   MaxOpenConns        : 30
+
+JWT:
+  Secret              : reation
+  Issuer              : blog-service
+  Expire              : 7200
+
+Email:
+  Host: smtp.163.com
+  Port: 465
+  UserName: reation_11
+  Password: Hai*isbest
+  IsSSL: true
+  From: reation_11@163.com
+  To:
+    - 123652149@qq.com
