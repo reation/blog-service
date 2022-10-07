@@ -21,8 +21,8 @@ App:
 Database:
   DBType              : mysql
   Username            : root
-  Password            : Mibx@2020
-  Host                : 123.57.156.250:3306
+  Password            : 19861029
+  Host                : 152.136.253.191:3306
   DBName              : blog_service
   TablePrefix         : blog_
   Charset             : utf8
