@@ -12,16 +12,16 @@ import (
 	"net/http"
 )
 
-func NewRouter() *gin.Engine{
+func NewRouter() *gin.Engine {
 	r := gin.New()
 	r.Use(gin.Logger())
 	r.Use(gin.Recovery())
 	r.Use(middleware.Translations())
 
 	//r.POST("/upload/file", )
-	article		:= v1.NewArticle()
-	tag			:= v1.NewTag()
-	upload 		:= api.NewUpload()
+	article := v1.NewArticle()
+	tag := v1.NewTag()
+	upload := api.NewUpload()
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	r.POST("/upload/file", upload.UploadFile)
 	r.StaticFS("/static", http.Dir(global.AppSetting.UploadSavePath))
@@ -46,5 +46,3 @@ func NewRouter() *gin.Engine{
 
 	return r
 }
-
-
